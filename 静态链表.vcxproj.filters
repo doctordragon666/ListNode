@@ -21,12 +21,24 @@
     <ClCompile Include="single_link_node.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="loop_link_node.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bidirect_link_node.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="list_def.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="single_link_node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="loop_link_node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bidirect_link_node.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

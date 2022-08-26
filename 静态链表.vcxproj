@@ -139,11 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bidirect_link_node.cpp" />
+    <ClCompile Include="loop_link_node.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="single_link_node.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bidirect_link_node.h" />
     <ClInclude Include="list_def.h" />
+    <ClInclude Include="loop_link_node.h" />
     <ClInclude Include="single_link_node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
