@@ -4,6 +4,7 @@
 namespace bidirect_link_node
 {
 	bool init(DoubleList*& L);
+	bool init(DoubleNode& head);
 
 	bool insert_font(DoubleList*& L, DoubleNode* node);
 	bool push(DoubleList*& L, DoubleNode* node);
