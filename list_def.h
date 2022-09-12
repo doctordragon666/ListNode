@@ -9,6 +9,10 @@ typedef struct _LinkNode {
 	int data;
 }LinkNode, LinkList;
 
-
+typedef struct _DoubleNode {
+	struct _DoubleNode* next;
+	struct _DoubleNode* prev;
+	int data;
+}DoubleNode, DoubleList;
 
 #endif // !_LIST_DEF_H
