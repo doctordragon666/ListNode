@@ -43,7 +43,7 @@ void test_single_link_node()
 	{
 		cout << "exist " << target << endl;
 	}
-	
+
 	//删除元素
 	single_link_node::delete_elem(head, 5);
 	print(head);
@@ -127,55 +127,55 @@ bool DbListInsert_back(DoubleNode
 int main()
 {
 	//test_single_link_node();
-	//test_loop_link_node();
+	test_loop_link_node();
 	//test_bidirect_link_node();
 
-	//1.创建一个空链表
-	ConnTimeout* c1 = new ConnTimeout;
-	c1->fd = -1;
-	init(c1->node);
+	////1.创建一个空链表
+	//ConnTimeout* c1 = new ConnTimeout;
+	//c1->fd = -1;
+	//init(c1->node);
 
-	//2.插入数据
-	int n = 10;
+	////2.插入数据
+	//int n = 10;
 
-	ConnTimeout* temp = nullptr;
-	while (n > 0)
-	{
-		temp = new ConnTimeout;
-		temp->fd = rand() & 10;
-		printf("s 的地址:%p  node:%p\n", temp, &(temp->node));
-		DbListInsert_back(c1->node, temp->node);
-		n--;
-	}
+	//ConnTimeout* temp = nullptr;
+	//while (n > 0)
+	//{
+	//	temp = new ConnTimeout;
+	//	temp->fd = rand() & 10;
+	//	printf("s 的地址:%p  node:%p\n", temp, &(temp->node));
+	//	DbListInsert_back(c1->node, temp->node);
+	//	n--;
+	//}
 
-	//3.访问相关数据
-	DoubleNode* p = nullptr;
-	p = &(c1->node);
-	cout << "\n遍历连接超时节点\n";
+	////3.访问相关数据
+	//DoubleNode* p = nullptr;
+	//p = &(c1->node);
+	//cout << "\n遍历连接超时节点\n";
 
-	while (p)
-	{
-		int offset = offsetof(ConnTimeout, node);
-		ConnTimeout* ct = ((ConnTimeout*)((size_t)p - offset));
-		cout << ct->fd << "->";
-		p = p->next;
-	}
-	cout << "end\n";
+	//while (p)
+	//{
+	//	int offset = offsetof(ConnTimeout, node);
+	//	ConnTimeout* ct = ((ConnTimeout*)((size_t)p - offset));
+	//	cout << ct->fd << "->";
+	//	p = p->next;
+	//}
+	//cout << "end\n";
 
-	//4.销毁链表
-	p = &(c1->node);
-	cout << "\n销毁连接超时节点\n";
+	////4.销毁链表
+	//p = &(c1->node);
+	//cout << "\n销毁连接超时节点\n";
 
-	while (p)
-	{
-		int offset = offsetof(ConnTimeout, node);
-		ConnTimeout* ct = ((ConnTimeout*)((size_t)p - offset));
-		printf("offset:%u ct: %p p:%p\n", offset, ct, p);
-		cout << ct->fd << endl;
-		p = p->next;
-		delete ct;
-	}
+	//while (p)
+	//{
+	//	int offset = offsetof(ConnTimeout, node);
+	//	ConnTimeout* ct = ((ConnTimeout*)((size_t)p - offset));
+	//	printf("offset:%u ct: %p p:%p\n", offset, ct, p);
+	//	cout << ct->fd << endl;
+	//	p = p->next;
+	//	delete ct;
+	//}
 
-	system("pause");
-	return 0;
+	//system("pause");
+	//return 0;
 }
